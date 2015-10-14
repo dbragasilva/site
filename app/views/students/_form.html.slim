@@ -1,9 +1,10 @@
-= form_for @student do |f|
-  - if @student.errors.any?
-    #error_explanation
-      h2 = "#{pluralize(@student.errors.count, "error")} prohibited this student from being saved:"
-      ul
-        - @student.errors.full_messages.each do |message|
-          li = message
+= simple_form_for(@student, html: { class: 'form-horizontal' }) do |f| 
 
-  .actions = f.submit
+  .form-group
+    = f.input :name, input_html: { class: 'form-control' }
+  
+  .form-group
+    = f.input :register_number, input_html: { class: 'form-control' }
+
+  .form-group
+    = f.button :submit, class: 'btn btn-success'
