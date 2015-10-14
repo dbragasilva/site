@@ -1,7 +1,11 @@
 FactoryGirl.define do
-  factory :student do
-    name "MyString"
-register_number "MyString"
+  factory :valid_student, class: 'Student' do
+    name            "João Paulo da Silva"
+    register_number "12345678"
   end
 
+  factory :invalid_student, class: 'Student' do
+    name             nil
+    register_number  nil
+  end
 end
