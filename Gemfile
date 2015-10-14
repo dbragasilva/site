@@ -12,6 +12,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'responders'
 gem 'simple_form'
 gem 'slim-rails'
+gem 'bootstrap-sass'
 
 group :development, :test do
   gem 'byebug' 
