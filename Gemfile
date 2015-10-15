@@ -13,13 +13,14 @@ gem 'responders'
 gem 'simple_form'
 gem 'slim-rails'
 gem 'bootstrap-sass'
+gem 'jquery-ui-rails'
 
-group :development, :test do
-  gem 'byebug' 
+group :development, :test do  
   gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'rspec-rails', '~> 3.0'
   gem 'shoulda'
   gem 'factory_girl_rails'
+  gem 'pry-byebug'
 end
 

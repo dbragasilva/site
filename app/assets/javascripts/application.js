@@ -12,5 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui
+//= require jasny-bootstrap.min
 //= require turbolinks
 //= require_tree .
