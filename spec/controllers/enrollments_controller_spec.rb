@@ -11,20 +11,6 @@ RSpec.describe EnrollmentsController, type: :controller do
       get :new
       expect(assigns(:enrollment)).to be_a_new(Enrollment)
     end
-
-    it "assigns a list of students" do
-      students = Student.all
-
-      get :new
-      expect(assigns(:students)).to eq(students)
-    end
-
-    it "assigns a list of courses" do
-      courses = Course.all
-
-      get :new
-      expect(assigns(:courses)).to eq(courses)
-    end
   end
 
 end

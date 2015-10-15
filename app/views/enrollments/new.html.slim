@@ -6,10 +6,10 @@
     = simple_form_for(@enrollment, html: { class: 'form-horizontal' }) do |f|
 
       .form-group
-        = f.association :student, collection: @students, input_html: { class: 'form-control' }
+        = f.association :student, input_html: { class: 'form-control' }
 
       .form-group
-        = f.association :course, collection: @courses, input_html: { class: 'form-control' }
+        = f.association :course, input_html: { class: 'form-control' }
 
       .form-group
         = f.input :entry_at, as: :string, input_html: { class: 'form-control', :"data-mask" => "99/99/9999" }

@@ -1,12 +1,10 @@
 class EnrollmentsController < ApplicationController
-  def new
-    @students = Student.all
-    @courses  = Course.all
+  def new    
     @enrollment = Enrollment.new
   end
 
   def create
-    @enrollment = Enrollment.new enrollment_params    
+    @enrollment = Enrollment.new enrollment_params
 
     if @enrollment.save
       redirect_to root_path, notice: 'Enrollment was successfully created.'
