@@ -7,7 +7,8 @@ class EnrollmentsController < ApplicationController
     @enrollment = Enrollment.new enrollment_params
 
     if @enrollment.save
-      redirect_to root_path, notice: 'Enrollment was successfully created.'
+      flash[:info] = 'Enrollment was successfully created.'
+      redirect_to root_path
     else      
       render :new
     end

@@ -19,23 +19,26 @@ class StudentsController < ApplicationController
     @student = Student.new(student_params)
 
     if @student.save
-      redirect_to @student, notice: 'Student was successfully created.'      
+      flash[:info] = 'Student was successfully created.'
+      redirect_to @student
       else
-      render :new      
+      render :new
     end
   end
   
   def update    
     if @student.update(student_params)
-      redirect_to @student, notice: 'Student was successfully updated.'      
+      flash[:info] = 'Student was successfully updated.'
+      redirect_to @student
     else
-      render :edit      
+      render :edit
     end    
   end
   
   def destroy
-    @student.destroy    
-    redirect_to students_url, notice: 'Student was successfully destroyed.'
+    @student.destroy
+    flash[:info] = 'Student was successfully destroyed.'
+    redirect_to students_url
   end
 
   private
