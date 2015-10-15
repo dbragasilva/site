@@ -11,14 +11,4 @@ RSpec.describe Student, type: :model do
     it { should have_many(:enrollments) }
     it { should have_many(:courses) }
   end
-
-  describe 'dependent' do
-    it 'destroy enrollments relationships' do
-      student = FactoryGirl.create(:valid_student)
-      course  = FactoryGirl.create(:valid_course)
-      Enrollment.create(student: student, course: course, entry_at: Date.today)
-
-      expect { student.destroy }.to change { Enrollment.count }.by(-1)
-    end
-  end
 end

@@ -5,6 +5,7 @@ class EnrollmentsController < ApplicationController
 
   def create
     @enrollment = Enrollment.new enrollment_params
+    binding.pry
 
     if @enrollment.save
       flash[:info] = 'Enrollment was successfully created.'
